@@ -103,6 +103,7 @@ public class Interfaz extends JFrame{
         pnlTabla.add(panelScroll, BorderLayout.CENTER);
         setDatosTabla();
         
+        //botones
         btn2 = new JButton("Pedir kit");
         btn2.setMaximumSize(new Dimension(200, 30)); 
         btn2.setPreferredSize(new Dimension(200, 30));

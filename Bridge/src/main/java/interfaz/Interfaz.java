@@ -54,7 +54,7 @@ public class Interfaz extends JFrame{
         //Labels y listas despleglables
         lblSelect = new JLabel("Escoge un vehiculo");
         lblSelect.setFont(new Font("", Font.PLAIN, 16));
-        lblSelect.setBorder(new EmptyBorder(10,0,0,0));
+        lblSelect.setBorder(new EmptyBorder(30,0,0,0));
         lblSelect.setAlignmentX(Component.CENTER_ALIGNMENT); 
         
         String[] opciones = {"Carro basico", "Carro avanzado", "Moto"};
@@ -64,7 +64,7 @@ public class Interfaz extends JFrame{
         
         lblSelect2 = new JLabel("Escoge un color");
         lblSelect2.setFont(new Font("", Font.PLAIN, 16));
-        lblSelect2.setBorder(new EmptyBorder(10,0,0,0));
+        lblSelect2.setBorder(new EmptyBorder(25,0,0,0));
         lblSelect2.setAlignmentX(Component.CENTER_ALIGNMENT);
         
         String[] opciones2 = {"Azul", "Rojo"};
@@ -87,11 +87,9 @@ public class Interfaz extends JFrame{
         
         //Adicion de componentes
         pnlMain.add(lblTitle);
-        pnlMain.add(Box.createRigidArea(new Dimension(0, 20)));
         pnlMain.add(lblSelect);
         pnlMain.add(Box.createRigidArea(new Dimension(0, 10)));
         pnlMain.add(lista);
-        pnlMain.add(Box.createRigidArea(new Dimension(0, 15)));
         pnlMain.add(lblSelect2);
         pnlMain.add(Box.createRigidArea(new Dimension(0, 10)));
         pnlMain.add(lista2);

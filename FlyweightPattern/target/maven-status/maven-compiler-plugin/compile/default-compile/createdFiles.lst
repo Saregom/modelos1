@@ -1,0 +1,5 @@
+flyweightPattern\FlyweightPattern.class
+interfaz\Interfaz.class
+logics\CellPhone.class
+logics\CellPhoneModel.class
+logics\CellPhoneFactory.class
