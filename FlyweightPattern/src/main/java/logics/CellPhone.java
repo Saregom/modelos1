@@ -13,12 +13,14 @@ public class CellPhone {
     private String ram;
     private String storage;
     private String camera;
+    private String color;
     private CellPhoneModel phoneModel;
     
-    public CellPhone(String ram, String storage, String camera, CellPhoneModel phoneModel) {
+    public CellPhone(String ram, String storage, String camera, String color, CellPhoneModel phoneModel) {
         this.ram = ram;
         this.storage = storage;
         this.camera = camera;
+        this.color = color;
         this.phoneModel = phoneModel;
     }
     
@@ -38,9 +40,12 @@ public class CellPhone {
         return camera;
     }
 
+     public String getColor() {
+        return color;
+    }
+    
     public CellPhoneModel getPhoneModel() {
         return phoneModel;
     }
-    
     
 }

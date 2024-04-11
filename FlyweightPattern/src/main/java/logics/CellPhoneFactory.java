@@ -12,12 +12,12 @@ import java.util.HashMap;
 public class CellPhoneFactory {
     private static final HashMap<String, CellPhoneModel> phoneModelsMap = new HashMap<>();
 
-    public static CellPhoneModel getCellPhoneModel(String model, String color) {
+    public static CellPhoneModel getCellPhoneModel(String model) {
         CellPhoneModel cellPhoneModel = phoneModelsMap.get(model);
 
         // Si el teléfono con la marca especificada no existe, lo creamos y lo almacenamos en el mapa
         if (cellPhoneModel == null) {
-            cellPhoneModel = new CellPhoneModel(model, color);
+            cellPhoneModel = new CellPhoneModel(model);
             phoneModelsMap.put(model, cellPhoneModel);
         }
         return cellPhoneModel;

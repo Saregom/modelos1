@@ -12,19 +12,14 @@ package logics;
 // Clase compartida por varios celulares (intrinseco)(Flyweight)
 public class CellPhoneModel{
     private String model;
-    private String color;
+    
 
-    public CellPhoneModel(String model, String color) {
+    public CellPhoneModel(String model) {
         this.model = model;
-        this.color = color;
     }
 
     public String display() {
         return this.model;
-//        System.out.println("Mostrando: " + img);
     }
 
-    public String getColor() {
-        return color;
-    }
 }
