@@ -223,5 +223,8 @@ public class Interfaz extends JFrame{
         pnlMain.add(pnlCell);
        
         SwingUtilities.updateComponentTreeUI(this);
+//        this.invalidate();
+//        this.validate();
+//        this.repaint();
     }
 }

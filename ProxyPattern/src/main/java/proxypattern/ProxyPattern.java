@@ -1,24 +1,21 @@
-package flyweightPattern;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
+package proxypattern;
+import interfas.Celular;
 import interfaz.Interfaz;
-
+import proxies.*;
 /**
  *
  * @author truqu
  */
-//Main
-public class FlyweightPattern {
-
+public class ProxyPattern {
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        new Interfaz();
+        // Llama interfaz y Crea un proxy para el servicio de Celular
+        new Interfaz(new CelularProxy("admin", "123"));
     }
-
-    //Obtiene un string aleatorio
-//    private static String getRandom(String[] brands) {
-//        return brands[(int) (Math.random() * brands.length)];
-//    }
 }
