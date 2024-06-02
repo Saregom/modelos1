@@ -12,5 +12,5 @@ package interfas;
 //Interface celular servicio
 public interface Celular {
     String hacerLlamada(String numero);
-    String ingresarACorreo(String usuario, String contraseña);
+    String ingresarAFacebook(String usuario, String internet);
 }

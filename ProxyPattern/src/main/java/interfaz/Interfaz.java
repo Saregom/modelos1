@@ -44,7 +44,7 @@ public class Interfaz extends JFrame{
     
     //Constructor de la interfaz, llama los componentes
     public Interfaz(Celular celularProxy){
-        super.setTitle("Celular"); //Setea el titulo de la app
+        super.setTitle("Celular Motorola"); //Setea el titulo de la app
         this.celularProxy = celularProxy;
         showComponents();
     }
@@ -58,13 +58,13 @@ public class Interfaz extends JFrame{
         pnlMain.setMaximumSize(new Dimension(600, 540));
         pnlMain.setPreferredSize(new Dimension(600, 540)); 
 
-        lblTitle = new JLabel("Ingresar a correo");
+        lblTitle = new JLabel("Ingresar a internet");
         lblTitle.setFont(new Font("", Font.BOLD, 20));
         lblTitle.setBorder(new EmptyBorder(10,0,0,0));
         lblTitle.setAlignmentX(Component.CENTER_ALIGNMENT);     
         
         //Labels, fields, botones
-        lbl1 = new JLabel("Usuario");
+        lbl1 = new JLabel("Ingresa url de la pagina");
         lbl1.setFont(new Font("", Font.PLAIN, 16));
         lbl1.setBorder(new EmptyBorder(10,0,0,0));
         lbl1.setAlignmentX(Component.CENTER_ALIGNMENT); 
@@ -118,7 +118,7 @@ public class Interfaz extends JFrame{
         
         //Action listeners
         btn1.addActionListener((ActionEvent evt) -> {
-            JOptionPane.showMessageDialog(this, celularProxy.ingresarACorreo(fld1.getText(), fld2.getText()), "Informacion", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, celularProxy.ingresarAFacebook(fld1.getText(), null), "Informacion", JOptionPane.INFORMATION_MESSAGE);
         });
         
         btn2.addActionListener((ActionEvent evt) -> {
@@ -134,9 +134,9 @@ public class Interfaz extends JFrame{
         pnlMain.add(lbl1);
         pnlMain.add(Box.createRigidArea(new Dimension(0, 10)));
         pnlMain.add(fld1);
-        pnlMain.add(lbl2);
-        pnlMain.add(Box.createRigidArea(new Dimension(0, 10)));
-        pnlMain.add(fld2);
+        //pnlMain.add(lbl2);
+        //pnlMain.add(Box.createRigidArea(new Dimension(0, 10)));
+        //pnlMain.add(fld2);
         pnlMain.add(Box.createRigidArea(new Dimension(0, 10)));
         pnlMain.add(btn1);
         pnlMain.add(lblTitle2);

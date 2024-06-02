@@ -13,11 +13,12 @@ import interfas.*;
 public class CelularReal implements Celular{
     @Override
     public String hacerLlamada(String numero) {
-        return "Llamando al número " + numero;
+        
+        return "Llamando al numero " + numero + " de tu lista de contactos";
     }
 
     @Override
-    public String ingresarACorreo(String usuario, String contrasena) {
-        return "Autenticacion correcta del usuario " + usuario;
+    public String ingresarAFacebook(String url, String internet) {
+        return "Ingresando a facebook\nDesde internet " + internet;
     }
 }

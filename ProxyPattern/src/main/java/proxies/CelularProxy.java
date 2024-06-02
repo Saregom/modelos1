@@ -13,33 +13,38 @@ import implementaciones.*;
 //Servio proxy
 public class CelularProxy implements Celular{
     private CelularReal celularReal;
-    private String usuario;
+    private String url;
     private String contrasena;
     private String listaContactos[];
+    private String pais;
+    private String internet;
 
-    public CelularProxy(String usuario, String contrasena) {
-        this.usuario = usuario;
+    public CelularProxy(String url, String contrasena, String pais, String internet) {
+        this.url = url;
         this.contrasena = contrasena;
         this.listaContactos = new String[]{"3170835965", "3004806087"};
         this.celularReal = new CelularReal();
+        this.pais = pais;
+        this.internet = internet;
     }
 
     @Override
     public String hacerLlamada(String numero) {
-        if (verificarNumero(numero)) {
+        if (!pais.equals("China")) {
             return celularReal.hacerLlamada(numero);
         } else {
-            return "Este numero no esta en tu lista de contactos.";
+            return "El pais de origen es china, no puedes hacer llamadas con este modelo";
         }
     }
 
     @Override
-    public String ingresarACorreo(String usuario, String contrasena) {
+    public String ingresarAFacebook(String url, String internet) {
         // Lógica para verificar el usuario y contraseña (ejemplo: usuario=admin, contraseña=123)
-        if (usuario.equals(this.usuario) && contrasena.equals(this.contrasena)) {
-            return celularReal.ingresarACorreo(usuario, contrasena);
+        if (url.equals("www.facebook.com") && this.internet.equals("Universidad distrital")) {
+            return "Acceso denegado. Sitio restringido por el proveedor de internet: " + this.internet;
+            
         } else {
-            return "Acceso denegado. Usuario o contraseña incorrectos.";
+            return celularReal.ingresarAFacebook(url, this.internet);
         }
     }
 

@@ -16,6 +16,7 @@ public class ProxyPattern {
      */
     public static void main(String[] args) {
         // Llama interfaz y Crea un proxy para el servicio de Celular
-        new Interfaz(new CelularProxy("admin", "123"));
+        new Interfaz(new CelularProxy("admin", "123", "China", "Universidad distrital"));
+         //new Interfaz(new CelularProxy("admin", "123", "Colombia", "privado"));
     }
 }
